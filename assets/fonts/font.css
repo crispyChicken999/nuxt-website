@@ -1,0 +1,16 @@
+/* 这个字体是胡晓波男神体 做了精简 只保留了中恒智造这四个字 */
+@font-face {
+  font-family: 'HuXiaoBo-NanShen';
+  src: url('./zhong-heng-zhi-zao.ttf');
+}
+
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('./DIN-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'parcel';
+  src: url('./parcel.ttf');
+}
+

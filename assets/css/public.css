@@ -1,0 +1,93 @@
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+  overflow-y: auto;
+
+}
+
+p {
+  margin: 0;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.apply-shake {
+  /* background-color: #f56c6c;
+  border-color: #f56c6c; */
+  /* color: white; */
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.el-dialog__headerbtn:hover .el-dialog__close,
+.el-dialog__headerbtn:focus .el-dialog__close {
+  color: #2daca8;
+}
+
+.el-upload--picture-card:hover,
+.el-upload:focus,
+.el-upload:focus .el-upload-dragger {
+  border-color: #2daca8;
+  color: #2daca8;
+}
+
+.el-range-editor.is-active,
+.el-range-editor.is-active:hover,
+.el-select .el-input.is-focus .el-input__inner,
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: #2daca8;
+}
+
+.el-button.is-plain:focus,
+.el-button.is-plain:hover {
+  background: #fff;
+  border-color: #2daca8;
+  color: #2daca8;
+}
+
+.el-textarea__inner:focus {
+  outline: 0;
+  border-color: #2daca8;
+}
