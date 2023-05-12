@@ -626,11 +626,12 @@ export default {
     .nav-login-wrapper {
       .login-btn-section {
         margin: 0;
+        min-width: 50px;
       }
     }
     .logo-section {
       // padding-left: 55px;
-      margin-left: -40px;
+      // margin-left: -40px;
       &.is-login {
         padding-left: 10px;
       }

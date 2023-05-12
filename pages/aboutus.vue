@@ -478,12 +478,13 @@ export default {
         .item {
           gap: 18px;
           display: flex;
-          // justify-content: space-between;
-          &:hover {
-            .decoration {
-              transition: all 0.3s;
-              transform: scale(1.05) translateY(-15px);
-              box-shadow: 2px 2px 12px 4px #24f7e175;
+          @media (any-hover: hover) {
+            &:hover {
+              .decoration {
+                transition: all 0.3s;
+                transform: scale(1.05) translate(5px, -5px);
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+              }
             }
           }
           .decoration {
@@ -495,6 +496,7 @@ export default {
             background: rgba(255, 255, 255, 0.48);
             border: 1px solid #fffcfc;
             border-radius: 100px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
           }
           .content {
             display: flex;
@@ -635,6 +637,12 @@ export default {
           max-width: 1000px;
           width: 100%;
           margin: 0 20px;
+          transition: all 0.3s;
+          @media (any-hover: hover) {
+            &:hover {
+              filter: drop-shadow(1px 2px 3px #6bd76990);
+            }
+          }
         }
       }
     }

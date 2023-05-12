@@ -1,5 +1,5 @@
-export default ({ store, route, redirect }) => {
-  if (!route.matched.length) {
-    redirect("/404");
-  }
+export default ({ route, redirect }) => {
+  // if (!route.matched.length) {
+  //   redirect("/404");
+  // }
 };

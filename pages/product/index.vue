@@ -66,7 +66,7 @@
       <div class="content">
         <div class="decoration">
           <img
-            :data-aos="clientWidth >=  1000 ? 'fade-up-right' : 'zoom-in-down'"
+            :data-aos="clientWidth >= 1000 ? 'fade-up-right' : 'zoom-in-down'"
             data-aos-easing="ease-out-cubic"
             data-aos-delay="100"
             data-aos-offset="0"
@@ -81,10 +81,10 @@
             融合企业以样带销”的销售模式，涵盖款式样衣、打版借版、销售订单、大货生产、进度跟踪、成衣出入库、销售统计、客户档案等环节，业务流程数字化、精细化管理，规范业务一单不落，帮助企业更专注于市场。
           </p>
           <div class="detail-btn-group">
-            <el-button type="primary" @click="clickToDetail(1)"
-              >获得详情</el-button
+            <el-button plain @click="clickToDetail(1)">查看详情</el-button>
+            <el-button type="primary" @click="applyForTrial('成衣业务管理系统')"
+              >申请试用</el-button
             >
-            <el-button plain @click="applyForTrial('成衣业务管理系统')">申请试用</el-button>
           </div>
         </div>
       </div>
@@ -93,7 +93,7 @@
       <div class="content">
         <div class="decoration">
           <img
-            :data-aos="clientWidth >=  1000 ? 'fade-up-left' : 'zoom-in-down'"
+            :data-aos="clientWidth >= 1000 ? 'fade-up-left' : 'zoom-in-down'"
             data-aos-easing="ease-out-cubic"
             data-aos-delay="100"
             data-aos-offset="0"
@@ -108,10 +108,12 @@
             面料生产管理涵盖了从原纱、辅料、机物料、浆染、织造、后整到成品检验入库的完整的面料生产环节，生产流程支持全数字化、自动化管理，辅以浆染、后整自动化料控制系统及智能操作终端，实现面料生产数据互联互通，消除管理盲点，标准化作业生产，极大降低人工经验依赖性和作业出错率。
           </p>
           <div class="detail-btn-group">
-            <el-button type="primary" @click="clickToDetail(2)"
-              >获得详情</el-button
+            <el-button plain @click="clickToDetail(2)">查看详情</el-button>
+            <el-button
+              type="primary"
+              @click="applyForTrial('牛仔面料生产管理系统')"
+              >申请试用</el-button
             >
-            <el-button plain @click="applyForTrial('牛仔面料生产管理系统')">申请试用</el-button>
           </div>
         </div>
       </div>
@@ -120,7 +122,7 @@
       <div class="content">
         <div class="decoration">
           <img
-            :data-aos="clientWidth >=  1000 ? 'fade-up-right' : 'zoom-in-down'"
+            :data-aos="clientWidth >= 1000 ? 'fade-up-right' : 'zoom-in-down'"
             data-aos-easing="ease-out-cubic"
             data-aos-delay="100"
             data-aos-offset="0"
@@ -135,10 +137,10 @@
             轻量级的面料业务销售管理应用。客户品牌建档管理，防止业务撞单及人员流动造成客户流失，订单信息集中管控，统筹运维保障及时交付，仓库信息及时、准确传递与反馈，方便业务人员快速响应客户需求。
           </p>
           <div class="detail-btn-group">
-            <el-button type="primary" @click="clickToDetail(3)"
-              >获得详情</el-button
+            <el-button plain @click="clickToDetail(3)">查看详情</el-button>
+            <el-button type="primary" @click="applyForTrial('面料业务管理系统')"
+              >申请试用</el-button
             >
-            <el-button plain @click="applyForTrial('面料业务管理系统')">申请试用</el-button>
           </div>
         </div>
       </div>
@@ -148,7 +150,7 @@
       <div class="content">
         <div class="decoration">
           <img
-            :data-aos="clientWidth >=  1000 ? 'fade-up-right' : 'zoom-in-down'"
+            :data-aos="clientWidth >= 1000 ? 'fade-up-right' : 'zoom-in-down'"
             data-aos-easing="ease-out-cubic"
             data-aos-delay="100"
             data-aos-offset="0"
@@ -163,25 +165,53 @@
             系统将根据用户需求定制各类生产、营销、库存、采购、质量等报表，并通过数据挖掘，深度分析隐含在数据背后的数据信息，蒋相关数据转化为技术图表和直观的图形，从而形成营销管理仪表盘、质量管理仪表盘、生产管理仪表盘、物流管理仪表盘，有助于企业高层分析数据，为高层提供决策支持。
           </p>
           <div class="detail-btn-group">
-            <el-button type="primary" @click="clickToDetail(4)"
-              >获得详情</el-button
+            <el-button plain @click="clickToDetail(4)">查看详情</el-button>
+            <el-button type="primary" @click="applyForTrial('可视化数据大屏')"
+              >申请试用</el-button
             >
-            <el-button plain @click="applyForTrial('可视化数据大屏')">申请试用</el-button>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="anchor"><a name="intelligence-facility"></a></div> -->
-    <div class="product-detail is-last is-dark" ref="facility">
+    <div class="product-detail is-reverse is-dark" ref="facility">
       <div class="content">
         <div class="decoration">
           <img
-            :data-aos="clientWidth >=  1000 ? 'fade-up-right' : 'zoom-out-down'"
+            :data-aos="clientWidth >= 1000 ? 'fade-up-left' : 'zoom-out-down'"
             data-aos-easing="ease-out-cubic"
             data-aos-delay="300"
             data-aos-offset="150"
             data-aos-duration="600"
-            src="~assets/imgs/product/product-5-decoration.png"
+            src="~assets/imgs/product/product-5-decoration.webp"
+            alt="product-decoration"
+          />
+        </div>
+        <div class="details">
+          <h2>织物回潮率在线检测控制系统</h2>
+          <p>
+            EnSAF04-M型烘筒节能控制系统通过在线实时检测织物的回潮率指标，利用分级调节+双闭环控制的方式，智能调节烘筒的蒸汽供给量，从而改变烘筒表面的烘干温度，使得织物获得稳定的回潮率，依此节省不必要的蒸汽能源，降低生产成本，减少碳排放量。
+          </p>
+          <div class="detail-btn-group">
+            <el-button plain @click="clickToDetail(5)">查看详情</el-button>
+            <el-button
+              type="primary"
+              @click="applyForTrial('织物回潮率在线检测控制系统')"
+              >申请试用</el-button
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-detail is-last" ref="facility">
+      <div class="content">
+        <div class="decoration">
+          <img
+            :data-aos="clientWidth >= 1000 ? 'fade-up-right' : 'zoom-out-down'"
+            data-aos-easing="ease-out-cubic"
+            data-aos-delay="300"
+            data-aos-offset="150"
+            data-aos-duration="600"
+            src="~assets/imgs/product/product-6-decoration.png"
             alt="product-decoration"
           />
         </div>
@@ -191,10 +221,10 @@
             自动化料系统是由中恒智造按照纺织印染工业染化料配液工艺流程及相关要求，结合自动化控制技术、工业互联网技术、IOT物联网技术、信息化技术、大数据等研发设计而成的一套高效率、自动化、智能化的染色配液调浆控制系统。.化料系统、用料系统的现场数据对比标准以及各个系统直接的对比，从而提醒管理人员当前的化料情况，生成浆染化料日志，实现由化料到生产的环节打通，数据串联，实现工厂的生产数据化，为未来实现无人车间做出重大变革。
           </p>
           <div class="detail-btn-group">
-            <el-button type="primary" @click="clickToDetail(5)"
-              >获得详情</el-button
+            <el-button plain @click="clickToDetail(6)">查看详情</el-button>
+            <el-button type="primary" @click="applyForTrial('浆染自动化料系统')"
+              >申请试用</el-button
             >
-            <el-button plain @click="applyForTrial('浆染自动化料系统')">申请试用</el-button>
           </div>
         </div>
       </div>
@@ -354,6 +384,8 @@ export default {
     transition: height 0.3s;
     justify-content: center;
     z-index: 1;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+      rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
     .link-content {
       display: flex;
       min-width: 1115px;
@@ -448,8 +480,8 @@ export default {
           height: auto;
           width: 555px;
           border-radius: 8px;
-        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            @media (any-hover: hover) {
+          transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          @media (any-hover: hover) {
             &:hover {
               transition: all 0.3s;
               transform: scale(1.12);
@@ -470,6 +502,7 @@ export default {
           color: #333333;
           line-height: 56px;
           transition: all 0.3s;
+          max-width: 480px;
         }
         p {
           font-size: 16px;
@@ -489,6 +522,7 @@ export default {
             padding: 14px 33px;
             transition: all 0.2s;
             &.el-button--primary {
+              margin-left: 20px;
               border-color: #259f9b;
               background-color: #259f9b;
               &:hover {
@@ -498,7 +532,6 @@ export default {
             }
             &.is-plain {
               color: #259f9b;
-              margin-left: 25px;
               border-color: #259f9b;
               background-color: transparent;
               &:hover {
@@ -671,6 +704,7 @@ export default {
           h2 {
             font-size: 24px;
             line-height: 36px;
+            max-width: initial;
           }
           p {
             font-size: 14px;

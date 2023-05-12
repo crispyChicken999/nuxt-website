@@ -441,7 +441,7 @@
 export default {
   name: "IndexPage",
   head: {
-    title: '中恒智造 - 首页',
+    title: '中恒智造 - 纺织数智化方案提供商',
   },
   data() {
     return {

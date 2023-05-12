@@ -3,19 +3,16 @@
     <common-header isHollowOutEnabled></common-header>
     <common-banner
       :title="product[type || 1].title"
-      :isDarkTitle="true"
+      :isDarkTitle="isDarkTitle"
       :bannerHeight="500"
       :isShowPreTitle="true"
       :isPreTitleBold="true"
-      preTitle="ERP定制产品"
+      :preTitle="product[type || 1].preTitle"
       :isProductDetailPage="true"
       :isShowApplyForTrialBtn="true"
       :subTitle="product[type || 1].subTitle"
-      :background="
-        require('~/assets/imgs/product/product-banner-background.webp')
-      "
+      :background="bannerBackground"
     ></common-banner>
-
     <template v-if="product[type || 1].title === '成衣业务管理系统'">
       <el-page-header
         @back="$router.go(-1)"
@@ -701,6 +698,15 @@
         </div>
       </div>
     </template>
+    <template
+      v-else-if="product[type || 1].title === '织物回潮率在线检测控制系统'"
+    >
+      <el-page-header
+        @back="$router.go(-1)"
+        content="产品详情"
+      ></el-page-header>
+      <product-steam-system></product-steam-system>
+    </template>
     <template v-else>
       <el-page-header
         @back="$router.go(-1)"
@@ -720,30 +726,40 @@ export default {
   },
   data() {
     return {
-      type: this.$route.query.type > 5 ? 1 : this.$route.query.type,
+      type: this.$route.query.type > 6 ? 1 : this.$route.query.type,
       product: {
         1: {
           title: "成衣业务管理系统",
           subTitle:
             "融合企业“以样带销”的销售模式，涵盖款式样衣、打版借版、销售订单、大货生产、进度跟踪、成衣出入库、销售统计、客户档案等环节，业务流程数字化、精细化管理，规范业务一单不落，帮助企业更专注于市场。",
+          preTitle: "ERP定制产品",
         },
         2: {
           title: "面料生产管理系统",
           subTitle:
             "生产流程支持全数字化、自动化管理，辅以浆染、后整自动化料控制系统及智能操作终端，实现面料生产数据互联互通，消除管理盲点，标准化作业生产，极大降低人工经验依赖性和作业出错率。",
+          preTitle: "ERP定制产品",
         },
         3: {
           title: "面料业务管理系统",
           subTitle:
             "轻量级的面料业务销售管理应用，客户品牌建档管理，防止业务撞单及人员流动造成客户流失，订单信息集中管控，统筹运维保障及时交付，仓库信息及时、准确传递与反馈，方便业务人员快速响应客户需求。",
+          preTitle: "ERP定制产品",
         },
         4: {
           title: "可视化数据大屏",
           subTitle: "基于EMI协同管控平台技术框架定制开发",
+          preTitle: "智慧工厂",
         },
         5: {
+          title: "织物回潮率在线检测控制系统",
+          subTitle: "",
+          preTitle: "蒸汽烘干节能减碳系列",
+        },
+        6: {
           title: "浆染自动化料系统",
           subTitle: "基于EMI协同管控平台技术框架定制开发",
+          preTitle: "智能装备",
         },
       },
       clientWidth: 0,
@@ -801,7 +817,18 @@ export default {
       window.removeEventListener("resize", this.handleResize);
     });
   },
-  computed: {},
+  computed: {
+    bannerBackground() {
+      let background = require("~/assets/imgs/product/product-banner-background.webp");
+      if (this.type === "5") {
+        background = require("~/assets/imgs/product/product-5-banner-background.webp");
+      }
+      return background;
+    },
+    isDarkTitle() {
+      return this.type !== "5";
+    },
+  },
   methods: {
     handleTabOptionSelect(index) {
       this.activeOptionIndex = index;

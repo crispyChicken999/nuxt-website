@@ -12,14 +12,14 @@
         :max-height="400"
         :data="tableData"
         highlight-current-row
+        :header-cell-style="{ textAlign: 'center' }"
       >
         <el-table-column
           width="100"
           prop="applyDate"
-          align="center"
           label="申请日期"
         ></el-table-column>
-        <el-table-column width="100" align="center" label="申请编号">
+        <el-table-column width="100" label="申请编号">
           <template slot-scope="scope">
             <span>{{ scope.row.applicationNo || "暂无数据" }}</span>
           </template>
@@ -27,20 +27,19 @@
         <el-table-column
           width="100"
           prop="name"
-          align="center"
           label="申请人"
         ></el-table-column>
-        <el-table-column width="100" align="center" label="联系方式">
+        <el-table-column width="100" label="联系方式">
           <template slot-scope="scope">
             <span>{{ scope.row.phone || "暂无数据" }}</span>
           </template>
         </el-table-column>
-        <el-table-column width="100" align="center" label="公司名称">
+        <el-table-column width="100" label="公司名称">
           <template slot-scope="scope">
             <span>{{ scope.row.companyName || "暂无数据" }}</span>
           </template>
         </el-table-column>
-        <el-table-column width="100" align="center" label="职位">
+        <el-table-column width="100" label="职位">
           <template slot-scope="scope">
             <span>{{ scope.row.position || "暂无数据" }}</span>
           </template>
@@ -48,30 +47,24 @@
         <el-table-column
           prop="trialSystemName"
           width="150"
-          align="center"
           label="试用系统名称"
         ></el-table-column>
-        <el-table-column
-          prop="status"
-          width="100"
-          align="center"
-          label="申请进度"
-        >
+        <el-table-column prop="status" width="100" label="申请进度">
           <template slot-scope="scope">
             <el-tag size="small" :type="tagType(scope.row.state)">{{
               scope.row.state || "审核中"
             }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column width="180" align="center" label="试用系统账号&密码">
+        <el-table-column width="180" label="试用系统账号&密码">
           <template slot-scope="scope">
             <span>{{
               scope.row.trialSystemAccountPassword || "暂无数据"
             }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="操作" fixed="right" align="center">
-          <template slot-scope="scope" align="center">
+        <el-table-column label="操作" fixed="right">
+          <template slot-scope="scope">
             <el-button @click="showDetails(scope.row)" type="text" size="small"
               >查看</el-button
             >
